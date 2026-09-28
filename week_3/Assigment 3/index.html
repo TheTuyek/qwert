@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Fixed Asset Recording Form for PT Rifqi</title>
+</head>
+<body>
+
+    <h1>Company Fixed Asset Recording Form</h1>
+    <p>Please fill out the form below to register a new fixed asset.</p>
+        
+        <fieldset>
+            <h1>Asset Identification</h1>
+            <p>
+                <label for="asset_name">Asset Name:</label><br>
+                <input type="text" id="asset_name" name="asset_name" required>
+            </p>
+            
+            <p>
+                <label for="asset_code">Asset Code:</label><br>
+                <input type="text" id="asset_code" name="asset_code" required>
+            </p>
+
+            <p>
+                <label for="asset_serial">Asset Serial Number:</label><br>
+                <input type="text" id="asset_serial" name="asset_serial">
+            </p>
+
+            <p>
+                <label for="asset_category">Asset Category:</label><br>
+                <select id="asset_category" name="asset_category" required>
+                    <option value="">-</option>
+                    <option value="Vehicle">Vehicle</option>
+                    <option value="Machinery">Machinery</option>
+                    <option value="Building">Building</option>
+                    <option value="Office Equipment">Office Equipment</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Land">Land</option>
+                    <option value="Software">Software</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <h1>Acquisition Details</h1>
+            <p>
+                <label for="acquisition_date">Acquisition Date:</label><br>
+                <input type="date" id="acquisition_date" name="acquisition_date" required>
+            </p>
+            <p>
+                <label for="acquisition_value">Acquisition Value / Purchase Price:</label><br>
+                <input type="number" id="acquisition_value" name="acquisition_value" min="0" step="1000" required>
+            </p>
+            <p>
+                <label>Acquisition Method:</label><br>
+                <input type="radio" id="cash" name="acquisition_method" value="Cash Purchase" required>
+                <label for="cash">Cash Purchase</label><br>
+                <input type="radio" id="credit" name="acquisition_method" value="Credit Purchase">
+                <label for="credit">Credit Purchase</label><br>
+                <input type="radio" id="lease" name="acquisition_method" value="Finance Lease">
+                <label for="lease">Finance Lease</label><br>
+                <input type="radio" id="donation" name="acquisition_method" value="Donation">
+                <label for="donation">Donation</label>
+            </p>
+            <p>
+                <label for="vendor">Vendor/Supplier:</label><br>
+                <input type="text" id="vendor" name="vendor" required>
+            </p>
+            <p>
+                <label for="acquisition_proof">Upload Acquisition Proof:</label><br>
+                <input type="file" id="acquisition_proof" name="acquisition_proof" accept=".pdf,.jpg,.png" required>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <h1>Depreciation Information</h1>
+            <p>
+                <label for="useful_life">Useful Life (Years):</label><br>
+                <input type="number" id="useful_life" name="useful_life" min="1" max="50" required>
+            </p>
+            <p>
+                <label for="salvage_value">Salvage Value:</label><br>
+                <input type="number" id="salvage_value" name="salvage_value" min="0" step="1000" required>
+            </p>
+            <p>
+                <label for="depreciation_method">Depreciation Method:</label><br>
+                <select id="depreciation_method" name="depreciation_method" required>
+                    <option value="">-</option>
+                    <option value="Straight-Line">Straight-Line</option>
+                    <option value="Declining Balance">Declining Balance</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <h1>Responsible Person & Location</h1>
+            <p>
+                <label for="responsible_person">Responsible Person's Name:</label><br>
+                <input type="text" id="responsible_person" name="responsible_person" required>
+            </p>
+            <p>
+                <label for="user_department">User Department:</label><br>
+                <input type="text" id="user_department" name="user_department" required>
+            </p>
+            <p>
+                <label for="asset_location">Asset Physical Location:</label><br>
+                <input type="text" id="asset_location" name="asset_location" required>
+            </p>
+            <p>
+                <label for="responsible_email">Responsible Person's Email:</label><br>
+                <input type="email" id="responsible_email" name="responsible_email" required>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
