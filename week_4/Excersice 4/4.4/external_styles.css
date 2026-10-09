@@ -1,0 +1,7 @@
+p {
+    color: black; /* Rule 6 */
+    background-color: yellow;
+}
+.normal-text {
+    font-style: italic; /* Rule 7 */
+}
